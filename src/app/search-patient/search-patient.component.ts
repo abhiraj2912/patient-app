@@ -30,4 +30,21 @@ export class SearchPatientComponent {
     )
   }
 
+  deleteValues=(id:any)=>{
+    let data:any={"id":id}
+    this.api.deletePatient(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if (response.status="success") {
+          alert("Patient deleted")
+          this.searchData=[]
+          this.name=""
+        } else {
+          alert("something went wrong")
+        }
+      }
+    )
+
+  }
+
 }

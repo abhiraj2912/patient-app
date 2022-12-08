@@ -44,7 +44,9 @@
                     <label for="" class="form-label">appoDate</label>
                     <input type="date" name="" id="" class="form-control" value="{{i.appoDate}}">
                 </div>
-                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"></div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <button (click)="deleteValues(i.id)" class="btn btn-danger">Delete</button>
+                </div>
             </div>
         </div>
     </div>

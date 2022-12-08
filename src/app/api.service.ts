@@ -15,4 +15,8 @@ export class ApiService {
   addPatient=(dataTosend:any)=>{
     return this.http.post("http://localhost:8080/add",dataTosend)
   }
+
+  searchPatient=(searchData:any)=>{
+    return this.http.post("http://localhost:8080/search",searchData)
+  }
 }

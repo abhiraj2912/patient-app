@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Patient Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-4" *ngFor="let i of searchData">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">name</label>
+                    <input type="text" class="form-control" value="{{i.name}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">gender</label>
+                    <input type="text" class="form-control" value="{{i.gender}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">address</label>
+                    <textarea name="" id="" cols="30" rows="2" class="form-control" value="{{i.address}}"></textarea>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">dob</label>
+                    <input type="date" name="" id="" class="form-control" value="{{i.dob}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">email</label>
+                    <input type="text" class="form-control"  value="{{i.email}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">phone</label>
+                    <input type="text" class="form-control" value="{{i.phone}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">docName</label>
+                    <input type="text" class="form-control" value="{{i.docName}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">appoDate</label>
+                    <input type="date" name="" id="" class="form-control" value="{{i.appoDate}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"></div>
+            </div>
+        </div>
+    </div>
+</div>
